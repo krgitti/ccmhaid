@@ -5,12 +5,31 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Ajuda Humanitária</Text>
-      <Button title="Novo Cadastro" onPress={() => navigation.navigate('NovoCadastro')} />
-      <Button title="Atendimentos" onPress={() => navigation.navigate('Atendimentos')} />
-      <Button title="Doações" onPress={() => navigation.navigate('Doacoes')} />
-      <Button title="Histórico" onPress={() => navigation.navigate('Historico')} />
-      <Button title="Relatórios" onPress={() => navigation.navigate('Relatorios')} />
-      <Button title="Configurações" onPress={() => navigation.navigate('Configuracoes')} />
+
+      <View style={styles.buttonContainer}>
+        <Button title="Novo Cadastro" onPress={() => navigation.navigate('NovoCadastro')} />
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <Button title="Atendimentos" onPress={() => navigation.navigate('Atendimentos')} />
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <Button title="Doações" onPress={() => navigation.navigate('Doacoes')} />
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <Button title="Histórico" onPress={() => navigation.navigate('Historico')} />
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <Button title="Relatórios" onPress={() => navigation.navigate('Relatorios')} />
+      </View>
+
+      <View style={styles.buttonContainer}>
+        <Button title="Configurações" onPress={() => navigation.navigate('Configuracoes')} />
+      </View>
+      
     </View>
   );
 }
@@ -26,5 +45,9 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+  },
+  buttonContainer: {
+    marginBottom: 12, // espaço de 12 entre botões
+    width: '80%', // opcional pra deixar os botões mais largos
   },
 });
